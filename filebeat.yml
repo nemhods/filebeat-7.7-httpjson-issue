@@ -1,0 +1,9 @@
+filebeat.inputs:
+- type: httpjson
+  interval: 3600s
+  http_method: GET
+  url: http://http-server:8000/test-bug.json
+  json_objects_array: response
+
+output.console:
+  pretty: true
